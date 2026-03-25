@@ -11,11 +11,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
     <link rel="manifest" href="assets/site.webmanifest" />
-    <!-- <script
+    <script
       src="https://mcp.figma.com/mcp/html-to-design/capture.js"
       async
     ></script> -->
@@ -41,8 +55,7 @@
         <div class="header-inner">
           <a href="#" class="logo">
             <div class="logo-mark">
-              <img src="/assets/logo.svg" alt="logo"/>
-            
+              <img src="/assets/logo.svg" alt="logo" />
             </div>
             <div>
               <div class="logo-name">Otoplenie<em></em></div>
@@ -55,27 +68,27 @@
             <a href="#pricing" class="nav-link">Цены</a>
             <a href="#portfolio" class="nav-link">Работы</a>
           </nav>
-          <div class="header-right">
-            <div class="header-geo">
-              <svg
-                width="14"
-                height="14"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Минск и Минская область
-            </div>
-            <a href="tel:+375441234567" class="header-phone"
-              >+375 (44) 123-45-67</a
+          <div class="header-geo">
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
-            <a href="#consultation" class="btn btn-orange">Заказать звонок</a>
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Минск и Минская область
+          </div>
+          <div class="header-right">
+            <a href="#consultation" class="btn btn-orange btn-hover-phone">
+              <span class="btn-text-default">Заказать звонок</span>
+              <span class="btn-text-hover">+375 (29) 637-53-33</span>
+            </a>
           </div>
         </div>
       </div>
@@ -87,12 +100,7 @@
     <!-- ═══════════════════════════════════════════════════ HERO -->
     <section class="hero">
       <div class="hero-split container">
-        <!-- <div class="container"> -->
         <div class="hero-split-left">
-          <!-- <div class="hero-eyebrow">
-            <span class="badge-dot"></span>
-            Монтаж и сервис котельного оборудования
-          </div> -->
           <h1 class="hero-h1">
             Установка котлов<br />и отопительных<br />систем
             <em>под ключ</em>
@@ -194,13 +202,6 @@
             </div>
           </div>
         </div>
-
-        <div class="hero-split-right hero-shapes">
-          <!-- <div class="hero-shape hero-shape-1"></div>
-          <div class="hero-shape hero-shape-2"></div>
-          <div class="hero-shape hero-shape-3"></div> -->
-        </div>
-        <!-- </div> -->
       </div>
     </section>
 
@@ -208,9 +209,6 @@
     <section class="boilers" id="boiler-types">
       <div class="container">
         <div class="section-hd reveal" style="text-align: center">
-          <!-- <div class="section-label" style="justify-content: center">
-            Наше оборудование
-          </div> -->
           <h2 class="display-title dark">Типы отопительных систем</h2>
           <p class="section-sub">
             Подберём оптимальное решение для вашего дома или предприятия
@@ -219,23 +217,41 @@
         <div class="boilers-grid">
           <div class="boiler-card reveal reveal-d1">
             <div class="boiler-card-img">
-              <img
-                src="https://images.unsplash.com/photo-1655039353512-ab38d6a37a92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
-                alt="Газовые котлы"
-              />
+              <img src="assets/boilers/gas.jpg" alt="Газовые котлы" />
             </div>
             <div class="boiler-card-body">
               <div class="boiler-card-name">Газовые котлы</div>
               <div class="boiler-card-desc">
-                Экономичное и эффективное решение. Автономная работа, высокий
-                КПД до 98%.
+                Современное, компактное и экономичное отопление для квартир и
+                коттеджей площадью до 400 кв м².
               </div>
-              <span class="boiler-price-tag">от 2000 BYN</span>
+              <span class="boiler-price-tag"
+                >от 1760 BYN + Монтаж от 300 BYN
+              </span>
             </div>
           </div>
           <div class="boiler-card reveal reveal-d2">
             <div class="boiler-card-img">
-              <!-- <img src="https://images.unsplash.com/photo-1564164494009-3876b2d197f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Электрические котлы"> -->
+              <img
+                src="assets/boilers/solid-fuel.png"
+                alt="Твердотопливные котлы"
+              />
+            </div>
+            <div class="boiler-card-body">
+              <div class="boiler-card-name">Твердотопливные</div>
+              <div class="boiler-card-desc">
+                Отличный вариант отопления вашего загородного дома.
+                Независимость от газа.
+              </div>
+              <span class="boiler-price-tag">+ Монтаж от 300 BYN </span>
+            </div>
+          </div>
+          <div class="boiler-card reveal reveal-d3">
+            <div class="boiler-card-img">
+              <img
+                src="assets/boilers/electric.jpg"
+                alt="Электрические котлы"
+              />
             </div>
             <div class="boiler-card-body">
               <div class="boiler-card-name">Электрические</div>
@@ -243,33 +259,22 @@
                 Максимальная безопасность и тихая работа. Идеально для квартир и
                 офисов.
               </div>
-              <span class="boiler-price-tag">от 200 BYN</span>
-            </div>
-          </div>
-          <div class="boiler-card reveal reveal-d3">
-            <div class="boiler-card-img">
-              <!-- <img src="https://images.unsplash.com/photo-1594822630493-f82fb96b001c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Твёрдотопливные котлы"> -->
-            </div>
-            <div class="boiler-card-body">
-              <div class="boiler-card-name">Твёрдотопливные</div>
-              <div class="boiler-card-desc">
-                Независимость от газа. Дрова, уголь, брикеты — для загородных
-                домов.
-              </div>
-              <span class="boiler-price-tag">от 200 BYN</span>
+              <span class="boiler-price-tag"
+                >от 450 BYN + Монтаж от 300 BYN
+              </span>
             </div>
           </div>
           <div class="boiler-card reveal reveal-d4">
             <div class="boiler-card-img">
-              <!-- <img src="https://images.unsplash.com/photo-1758873263491-f3969d8c6fda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Конденсационные котлы"> -->
+              <img src="assets/boilers/pellet.jpg" alt="Пеллетные котлы" />
             </div>
             <div class="boiler-card-body">
-              <div class="boiler-card-name">Конденсационные</div>
+              <div class="boiler-card-name">Пеллетные</div>
               <div class="boiler-card-desc">
-                Максимальная энергоэффективность. Экономия до 30% на газе
-                ежегодно.
+                Автоматизированный комфорт с высокой автономностью работы от
+                нескольких дней.
               </div>
-              <span class="boiler-price-tag">от 2000 BYN</span>
+              <span class="boiler-price-tag">+ Монтаж от 600 BYN </span>
             </div>
           </div>
         </div>
@@ -410,7 +415,7 @@
           <div class="problem-item reveal reveal-d1">
             <div class="problem-num">01</div>
             <div class="problem-body">
-              <div class="problem-text">Высокие цены подрядчиков</div>
+              <!-- <div class="problem-text">Высокие цены подрядчиков</div> -->
               <div class="problem-sol">
                 Предлагаем расчёт системы отопления в трёх вариантах с
                 демонстрацией каждого на реальном объекте, выполненном нами
@@ -420,7 +425,7 @@
           <div class="problem-item reveal reveal-d2">
             <div class="problem-num">02</div>
             <div class="problem-body">
-              <div class="problem-text">Комплектующие низкого качества</div>
+              <!-- <div class="problem-text">Комплектующие низкого качества</div> -->
               <div class="problem-sol">
                 Применяем оборудование немецкого и итальянского производства,
                 подтверждая это сертификатом соответствия
@@ -430,7 +435,7 @@
           <div class="problem-item reveal reveal-d3">
             <div class="problem-num">03</div>
             <div class="problem-body">
-              <div class="problem-text">Подбор оборудования без расчётов</div>
+              <!-- <div class="problem-text">Подбор оборудования без расчётов</div> -->
               <div class="problem-sol">
                 К договору прикрепляем расчёт гидравлики и расчёт теплопотерь
               </div>
@@ -439,7 +444,7 @@
           <div class="problem-item reveal reveal-d4">
             <div class="problem-num">04</div>
             <div class="problem-body">
-              <div class="problem-text">Оплата без проверки системы</div>
+              <!-- <div class="problem-text">Оплата без проверки системы</div> -->
               <div class="problem-sol">
                 Рассчитываетесь с нами только после проверки системы на
                 герметичность — опрессовка давлением в 1,5 раза выше рабочего в
@@ -558,113 +563,70 @@
     <!-- ═══════════════════════════════════════════════════ CREDIT -->
     <section class="credit-section" id="credit">
       <div class="container">
-        <div class="credit-block reveal">
-          <div class="credit-inner">
-            <div class="credit-left">
-              <div class="credit-header">
-                <div class="credit-ic">
-                  <svg viewBox="0 0 24 24">
-                    <rect x="2" y="5" width="20" height="14" rx="2" />
-                    <path d="M2 10h20" />
-                  </svg>
-                </div>
-                <div class="credit-title">РАБОТАЕМ<br />С КРЕДИТОМ</div>
-              </div>
-              <p class="credit-desc">
-                Установите отопление сейчас — платите частями! Помогаем с
-                оформлением кредита на выгодных условиях
-              </p>
-              <div class="credit-benefits">
-                <div class="credit-benefit">
-                  <div class="credit-benefit-ic">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="credit-benefit-name">От 0% годовых</div>
-                    <div class="credit-benefit-sub">
-                      Работаем с ведущими банками
-                    </div>
-                  </div>
-                </div>
-                <div class="credit-benefit">
-                  <div class="credit-benefit-ic">
-                    <svg viewBox="0 0 24 24">
-                      <rect x="3" y="4" width="18" height="18" rx="2" />
-                      <path d="M16 2v4M8 2v4M3 10h18" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="credit-benefit-name">До 5 лет</div>
-                    <div class="credit-benefit-sub">
-                      Гибкие сроки кредитования
-                    </div>
-                  </div>
-                </div>
-                <div class="credit-benefit">
-                  <div class="credit-benefit-ic">
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
-                      />
-                      <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="credit-benefit-name">Минимум документов</div>
-                    <div class="credit-benefit-sub">
-                      Быстрое оформление на месте
-                    </div>
-                  </div>
-                </div>
-                <div class="credit-benefit">
-                  <div class="credit-benefit-ic">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                      <path d="M22 4L12 14.01l-3-3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="credit-benefit-name">Одобрение за 1 день</div>
-                    <div class="credit-benefit-sub">Быстрое решение банка</div>
-                  </div>
-                </div>
-              </div>
-              <div class="banks-block">
-                <div class="banks-header">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"
-                    />
-                  </svg>
-                  Банки-партнёры
-                </div>
-                <div class="banks-list">
-                  <div class="bank-item">Банк</div>
-                  <div class="bank-item">Банк</div>
-                  <div class="bank-item">Банк</div>
-                  <div class="bank-item">Банк</div>
-                  <div class="bank-item">Банк</div>
-                  <div class="bank-item">Банк</div>
-                </div>
-              </div>
+        <div class="section-hd reveal" style="text-align: center">
+          <h2 class="display-title dark">Работаем с льготными программами</h2>
+          <p class="section-sub">
+            Безналичный расчёт, льготные кредиты и материнский капитал
+          </p>
+        </div>
+        <div class="credit-cards reveal">
+          <div class="credit-card">
+            <div class="credit-card-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
             </div>
-            <div class="credit-right">
-              <!-- <img
-                src="https://images.unsplash.com/photo-1571715268998-d6e79bed5fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
-                alt="Рассрочка на котёл"
-              />
-              <div class="credit-right-overlay"></div> -->
+            <div class="credit-card-name">Материнский капитал</div>
+            <div class="credit-card-sub">
+              Принимаем в качестве оплаты за работы и оборудование
+            </div>
+          </div>
+          <div class="credit-card">
+            <div class="credit-card-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path
+                  d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
+                />
+              </svg>
+            </div>
+            <div class="credit-card-name">Льготные кредиты</div>
+            <div class="credit-card-sub">
+              Помогаем с оформлением по льготной ставке
+            </div>
+          </div>
+          <div class="credit-card">
+            <div class="credit-card-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <path d="M2 10h20M6 15h4" />
+              </svg>
+            </div>
+            <div class="credit-card-name">Безналичный расчёт</div>
+            <div class="credit-card-sub">
+              Оплата по счёту для физических и юридических лиц
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="credit-section-shapes">
-        <img src="./assets/shapes.png" alt="shapes" />
       </div>
     </section>
 
@@ -690,30 +652,23 @@
             <div class="slide">
               <div class="slide-inner">
                 <div class="slide-half">
-                  <img
-                    src="https://scontent.cdninstagram.com/v/t51.82787-15/624467168_18094077151795809_1580584622200087205_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MjgyNzc1NjYzNDIzMjE2NzQ0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDB4MTIwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=n62HH3w78xIQ7kNvwGHK3Ka&_nc_oc=AdmxbYCc_xuwkcEHP4MsTnH2zmj5TJEWAIU_9CGMb0IBB04boPaRYLhb0zhY3fs6UqM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=JapZbZrl3HYmFR_GuHR98w&_nc_ss=8&oh=00_AfyYAVPtat14Q64UwJcB-TMSE8Wzk2zb4bEXMb_OQimidQ&oe=69B052F6"
-                    alt="До монтажа"
-                  />
+                  <img src="assets/portfolio/slide1_1.jpg" alt="До монтажа" />
                   <div class="slide-before-overlay"></div>
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-before">ДО</span> -->
                   <div class="slide-info">
                     <div class="slide-loc">Минск</div>
-                    <div class="slide-proj">Бойлеры косвенного нагрева</div>
+                    <div class="slide-proj">Монатаж электрического бойлера</div>
                   </div>
                 </div>
                 <div class="slide-half">
                   <img
-                    src="https://scontent.cdninstagram.com/v/t51.82787-15/623652123_18084770929917019_3603235008681405445_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=Mjg1NjkyMzY5OTYzNTQ0MDkwMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDF4MTIwMS5zZHIuQzMifQ%3D%3D&_nc_ohc=YkqnzeLMIgIQ7kNvwGvKYRi&_nc_oc=Adn5QcO-vtYrdxL-_do4aWhkMJU6PRgrdiar7851qcY_Sj82b-7-vMadw54JTLfZUSc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=2co4jg9j8i6V8zkRCliiFQ&_nc_ss=8&oh=00_AfwOfjHDflxmmI1CKUpZ5_9hdCMlCDwLwfXyh8gaRYxYEw&oe=69B04FFA"
+                    src="assets/portfolio/slide1_2.jpg"
                     alt="После монтажа"
                   />
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-after">ПОСЛЕ</span> -->
                   <div class="slide-info">
                     <div class="slide-loc">Название проекта</div>
-                    <div class="slide-proj">
-                      Современная конденсационная котельная
-                    </div>
+                    <div class="slide-proj">Газовый котел</div>
                   </div>
                 </div>
               </div>
@@ -722,13 +677,9 @@
             <div class="slide">
               <div class="slide-inner">
                 <div class="slide-half">
-                  <img
-                    src="https://scontent.cdninstagram.com/v/t51.29350-15/314478040_1150195038947226_6484033060012596728_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mjk2NDg1NDA3Mzg4Mjk5NTQxMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=I0GyYBiht4MQ7kNvwHPBDyl&_nc_oc=Adl1AezxBA_9u-vKTuOPlTlk1Cqia4xOAujW0sPumplebwCPtK86HKZDgNpJ-khgw1Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=2co4jg9j8i6V8zkRCliiFQ&_nc_ss=8&oh=00_Afzyk_3aRhgnOO4SVsnR54j-iCb4nCsZF_2TB6LGwA2uWg&oe=69B043F8"
-                    alt="До монтажа"
-                  />
+                  <img src="assets/portfolio/slide2_1.jpg" alt="До монтажа" />
                   <div class="slide-before-overlay"></div>
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-before">ДО</span> -->
                   <div class="slide-info">
                     <div class="slide-loc">Минск</div>
                     <div class="slide-proj">Монтаж котельной</div>
@@ -736,11 +687,10 @@
                 </div>
                 <div class="slide-half">
                   <img
-                    src="https://scontent.cdninstagram.com/v/t51.29350-15/316767682_114354354829133_2477428507966635932_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ig_cache_key=Mjk3NzE4OTIzNjUyNDY0ODUwNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=hbIHk6t0dKYQ7kNvwE3IrTo&_nc_oc=AdnptGBfX4OShQeRNMMJlNygA9ba-rLH897wXl4BhPHN80Es4fglTZiFIj1fzCdTo38&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=5AzRa-3A5OHPuHqXnO6ocA&_nc_ss=8&oh=00_AfzqMCxouyZx7Uh4utoL86joVZCEMowtGHjxYdN5UPX6qA&oe=69B04318"
+                    src="assets/portfolio/slide2_2.jpg"
                     alt="После монтажа"
                   />
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-after">ПОСЛЕ</span> -->
                   <div class="slide-info">
                     <div class="slide-loc">Название проекта</div>
                     <div class="slide-proj">
@@ -755,29 +705,24 @@
               <div class="slide-inner">
                 <div class="slide-half">
                   <img
-                    src="https://scontent.cdninstagram.com/v/t51.29350-15/330756079_221362003664429_3806587792982745937_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=MzAzODE0ODg0NjkyNDAwNzk3MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyMDB4MTUwMC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=IFOa95tR4_gQ7kNvwF8hWpo&_nc_oc=AdmT7i3Za2JtcyMqxKouzIvz3l8qYXNufYPF_b6mRi1kbvWqQM_cegedNeAp0TKCwmI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=5AzRa-3A5OHPuHqXnO6ocA&_nc_ss=8&oh=00_Afxh8pXuqa2TqqgdDviwacgqbCJxeOlRwUa0PfAADZIhHQ&oe=69B059A7"
-                    alt="До монтажа"
+                    src="/assets/portfolio/slide3_1.jpg"
+                    alt="Монтаж электрокотла"
                   />
                   <div class="slide-before-overlay"></div>
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-before">ДО</span> -->
+
                   <div class="slide-info">
                     <div class="slide-loc">Название</div>
-                    <div class="slide-proj">Устаревший электрокотёл</div>
+                    <div class="slide-proj">Монтаж электрокотла</div>
                   </div>
                 </div>
                 <div class="slide-half">
-                  <img
-                    src="https://scontent.cdninstagram.com/v/t51.82787-15/619415902_17985570368930827_6797297460965389346_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzI0MDk4NTMwMjEzNzUxMzc1NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=RdlV24hCFw0Q7kNvwE1zDzl&_nc_oc=AdkLPhIO91JjUdExvlUyH9ZS-qT9stNhoqWF5Q7ThtCq7jSu9Tct_03bPCGGa5ZMbsk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=eqL2Iv03YutRGY0PnvLH1g&_nc_ss=8&oh=00_AfzcxwGKugcQbUiEjQmPErfqhYlPwpPc1L-QVFKZEvIrDQ&oe=69B054CB"
-                    alt="После монтажа"
-                  />
+                  <img src="/assets/portfolio/slide3_2.jpg" alt="" />
                   <div class="slide-overlay"></div>
-                  <!-- <span class="slide-badge badge-after">ПОСЛЕ</span> -->
+
                   <div class="slide-info">
-                    <div class="slide-loc">Название проекта</div>
-                    <div class="slide-proj">
-                      Пеллетная котельная с автоподачей
-                    </div>
+                    <div class="slide-loc">Минская облать, г. Борисов</div>
+                    <div class="slide-proj">Установка водонагревателя</div>
                   </div>
                 </div>
               </div>
@@ -830,14 +775,14 @@
                     <div class="pt-service-name">Монтаж газового котла</div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 300</td>
+                  <td class="pt-price">от 300 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">Монтаж газовой колонки</div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 200</td>
+                  <td class="pt-price">от 200 р</td>
                 </tr>
                 <tr>
                   <td>
@@ -846,7 +791,7 @@
                     </div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 500</td>
+                  <td class="pt-price">от 500 р</td>
                 </tr>
                 <tr>
                   <td>
@@ -855,7 +800,7 @@
                     </div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 300</td>
+                  <td class="pt-price">от 300 р</td>
                 </tr>
                 <tr>
                   <td>
@@ -864,7 +809,7 @@
                     </div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 250</td>
+                  <td class="pt-price">от 250 р</td>
                 </tr>
               </tbody>
             </table>
@@ -891,33 +836,26 @@
               <tbody>
                 <tr>
                   <td>
-                    <div class="pt-service-name">
-                      Монтаж тёплого пола (с утеплением)
-                    </div>
+                    <div class="pt-service-name">Монтаж тёплого пола</div>
                   </td>
                   <td><div class="pt-service-note">м²</div></td>
-                  <td class="pt-price">от 15</td>
+                  <td class="pt-price">от 15 р</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="pt-service-name">Укладка утеплителя</div>
+                  </td>
+                  <td><div class="pt-service-note">м²</div></td>
+                  <td class="pt-price">от 3 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">
                       Монтаж радиатора отопления
                     </div>
-                    <div class="pt-service-note">
-                      Перенос радиатора — цена договорная
-                    </div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 100</td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="pt-service-name">
-                      Монтаж расширительного бака
-                    </div>
-                  </td>
-                  <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 50</td>
+                  <td class="pt-price">от 150 р</td>
                 </tr>
                 <tr>
                   <td>
@@ -926,14 +864,23 @@
                     </div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 50</td>
+                  <td class="pt-price">от 60 р</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="pt-service-name">
+                      Монтаж расширительного бака
+                    </div>
+                  </td>
+                  <td><div class="pt-service-note">шт.</div></td>
+                  <td class="pt-price">от 50 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">Монтаж насосной группы</div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 60</td>
+                  <td class="pt-price">от 60 р</td>
                 </tr>
               </tbody>
             </table>
@@ -961,28 +908,37 @@
               </thead>
               <tbody>
                 <tr>
+                  <td>
+                    <div class="pt-service-name">Прокладка трубопровода</div>
+                  </td>
+                  <td><div class="pt-service-note">м.п.</div></td>
+                  <td class="pt-price">от 5 р</td>
+                </tr>
+                <tr>
                   <td><div class="pt-service-name">Обвязка скважины</div></td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 300</td>
+                  <td class="pt-price">от 300 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">Монтаж точки водопровода</div>
                   </td>
                   <td><div class="pt-service-note">точка</div></td>
-                  <td class="pt-price">от 40</td>
+                  <td class="pt-price">от 45 р</td>
                 </tr>
                 <tr>
-                  <td><div class="pt-service-name">Монтаж канализации</div></td>
+                  <td>
+                    <div class="pt-service-name">Монтаж точки канализации</div>
+                  </td>
                   <td><div class="pt-service-note">точка</div></td>
-                  <td class="pt-price">от 40</td>
+                  <td class="pt-price">от 60 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">Установка инсталляции</div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 100</td>
+                  <td class="pt-price">от 100 р</td>
                 </tr>
               </tbody>
             </table>
@@ -1016,24 +972,24 @@
                     <div class="pt-service-name">Штробление газосиликат</div>
                   </td>
                   <td><div class="pt-service-note">м²</div></td>
-                  <td class="pt-price">от 2</td>
+                  <td class="pt-price">от 2 р</td>
                 </tr>
                 <tr>
                   <td><div class="pt-service-name">Штробление кирпич</div></td>
                   <td><div class="pt-service-note">м²</div></td>
-                  <td class="pt-price">от 10</td>
+                  <td class="pt-price">от 10 р</td>
                 </tr>
                 <tr>
                   <td><div class="pt-service-name">Штробление бетон</div></td>
                   <td><div class="pt-service-note">м²</div></td>
-                  <td class="pt-price">от 20</td>
+                  <td class="pt-price">от 20 р</td>
                 </tr>
                 <tr>
                   <td>
                     <div class="pt-service-name">Демонтаж сантехприбора</div>
                   </td>
                   <td><div class="pt-service-note">шт.</div></td>
-                  <td class="pt-price">от 20</td>
+                  <td class="pt-price">от 20 р</td>
                 </tr>
                 <tr>
                   <td><div class="pt-service-name">Заливка стяжки</div></td>
@@ -1066,9 +1022,9 @@
     <section class="consultation" id="consultation">
       <div class="container">
         <div class="section-hd reveal">
-          <div class="section-label" style="justify-content: center">
+          <!-- <div class="section-label" style="justify-content: center">
             Обратная связь
-          </div>
+          </div> -->
           <h2 class="display-title dark">Получить консультацию</h2>
           <p class="section-sub">
             Оставьте заявку, и наш специалист свяжется с вами в течение 15 минут
@@ -1110,7 +1066,7 @@
                   required
                 />
               </div>
-              <div class="form-field">
+              <!-- <div class="form-field">
                 <label class="form-label">
                   <svg viewBox="0 0 24 24">
                     <path
@@ -1126,8 +1082,8 @@
                   name="email"
                   placeholder="example@mail.com"
                 />
-              </div>
-              <div class="form-field">
+              </div> -->
+              <!-- <div class="form-field">
                 <label class="form-label">
                   <svg viewBox="0 0 24 24">
                     <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -1141,8 +1097,8 @@
                   name="address"
                   placeholder="Город, улица, дом"
                 />
-              </div>
-              <div class="form-field">
+              </div> -->
+              <!-- <div class="form-field">
                 <label class="form-label">
                   <svg viewBox="0 0 24 24">
                     <path
@@ -1162,7 +1118,7 @@
                   <option>Ремонт и обслуживание</option>
                   <option>Консультация</option>
                 </select>
-              </div>
+              </div> -->
               <div class="form-field">
                 <label class="form-label">
                   <svg viewBox="0 0 24 24">
@@ -1200,8 +1156,8 @@
                 Отправить заявку
               </button>
               <p class="form-privacy">
-                Нажимая кнопку, вы соглашаетесь с
-                <a href="#">политикой конфиденциальности</a>
+                Ваши данные будут в безопасности и не будут переданы третьим
+                лицам
               </p>
             </form>
           </div>
@@ -1270,15 +1226,13 @@
             </div>
             <div class="phone-card">
               <div class="phone-card-title">Или позвоните нам прямо сейчас</div>
-              <a href="tel:+375441234567" class="phone-card-number"
-                >+375 (44) 123-45-67</a
+              <a href="tel:+375296375333" class="phone-card-number"
+                >+375 (29) 637-53-33</a
               >
               <div class="phone-card-hours">
-                Работаем ежедневно с 9:00 до 21:00
+                Время работы интернет магазина Пн-Вс с 9.00 до 18.00. Заявки на
+                сайте принимаются круглосуточно.
               </div>
-            </div>
-            <div class="engineer-photo-card">
-              <!-- <img src="https://images.unsplash.com/photo-1599463698367-11cb72775b67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Наши специалисты"> -->
             </div>
           </div>
         </div>
@@ -1288,28 +1242,36 @@
     <!-- ═══════════════════════════════════════════════════ FOOTER -->
     <footer>
       <div class="container">
-        <!-- <div class="footer-grid">
+        <div class="footer-grid">
           <div class="footer-brand">
-            <span class="footer-logo-name"><em>ЛОГОТИП</em></span>
+            <a href="#" class="logo footer-logo">
+              <div class="logo-mark">
+                <img src="/assets/white-logo.svg" alt="logo" />
+              </div>
+              <div>
+                <div class="logo-name white">Otoplenie<em></em></div>
+                <span class="logo-tag">Belarus</span>
+              </div>
+            </a>
+            <!-- <span class="footer-logo-name"><em>ЛОГОТИП</em></span> -->
             <p class="footer-about">
-              Профессиональная установка котлов и отопительных систем по всей
-              России. Надёжно, быстро, с гарантией 5 лет.
+              Профессиональная установка котлов и отопительных систем по Минску
+              и Минской области. Надёжно, быстро, с гарантией 5 лет.
             </p>
-            <p class="footer-since">Работаем с 2011 года</p>
           </div>
           <div>
             <div class="footer-col-title">Услуги</div>
             <div class="footer-links">
-              <a href="#services" class="footer-link"
-                >Установка газовых котлов</a
-              >
+              <a href="#services" class="footer-link">Газовое оборудование</a>
               <a href="#services" class="footer-link"
                 >Установка электрокотлов</a
               >
-              <a href="#services" class="footer-link">Монтаж отопления</a>
-              <a href="#services" class="footer-link">Тёплый пол</a>
+              <a href="#services" class="footer-link"
+                >Монтаж твердотоплевных котлов</a
+              >
+              <a href="#services" class="footer-link">Системы отопления</a>
               <a href="#services" class="footer-link">Ремонт и обслуживание</a>
-              <a href="#services" class="footer-link">Проектирование</a>
+              <a href="#services" class="footer-link">Комплектующие</a>
             </div>
           </div>
           <div>
@@ -1322,11 +1284,11 @@
                   />
                 </svg>
                 <div>
-                  <a href="tel:+375441234567" class="footer-contact-a"
-                    >+375 (44) 123-45-67</a
+                  <a href="tel:+375296375333" class="footer-contact-a"
+                    >+375 (29) 637-53-33</a
                   >
-                  <a href="tel:+375441234567" class="footer-contact-sub"
-                    >+375 (44) 123-45-67</a
+                  <a href="tel:+375297167592" class="footer-contact-sub"
+                    >+375 (29) 716-75-92</a
                   >
                 </div>
               </div>
@@ -1339,10 +1301,10 @@
                 </svg>
                 <div>
                   <a
-                    href="mailto:info@teplomasters.ru"
+                    href="mailto:otoplenie5@tut.by"
                     class="footer-contact-a"
                     style="font-size: 15px"
-                    >info@teplomasters.ru</a
+                    >otoplenie5@tut.by</a
                   >
                 </div>
               </div>
@@ -1355,7 +1317,8 @@
                   <span
                     class="footer-contact-sub"
                     style="color: rgba(255, 255, 255, 0.75)"
-                    >г. Москва, ул. Академика Янгеля, д. 1</span
+                    >г.Минск, Минск, 220062<br />Княгининская 6, 6
+                    <br />Республика Беларусь</span
                   >
                 </div>
               </div>
@@ -1364,17 +1327,19 @@
           <div>
             <div class="footer-col-title">Режим работы</div>
             <div class="footer-hours-title">Ежедневно</div>
-            <div class="footer-hours-val">с 9:00 до 21:00</div>
-            <a href="#consultation" class="btn btn-orange" style="width: 100%; display: block; text-align: center;">Заказать звонок</a>
+            <div class="footer-hours-val">
+              с 9:00 до 18:00<br />
+              Заявки на сайте принимаются круглосуточно.
+            </div>
+
+            <a
+              href="tel:+375296375333"
+              class="btn btn-orange"
+              style="width: 100%; display: block; text-align: center"
+              >Позвонить</a
+            >
           </div>
         </div>
-        <div class="footer-bottom">
-          <p class="footer-copy">© 2024 ТеплоМастер. Все права защищены.</p>
-          <div class="footer-legal">
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Договор оферты</a>
-          </div>
-        </div> -->
       </div>
     </footer>
 
@@ -1450,7 +1415,7 @@
       document.getElementById("lead-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const btn = document.getElementById("submit-btn");
-        btn.textContent = "✓ Заявка отправлена! Позвоним в течение 15 мин";
+        btn.textContent = "✓ Заявка отправлена!";
         btn.style.background = "#27AE60";
         btn.disabled = true;
       });
