@@ -237,6 +237,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-right: 120px;
 }
 .nav-link {
   font-size: 16px;
@@ -1294,7 +1295,19 @@ footer {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.65;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-social:hover {
+  color: var(--orange);
 }
 .footer-since {
   font-size: 13px;
