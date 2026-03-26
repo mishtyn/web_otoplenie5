@@ -234,7 +234,6 @@ header.scrolled {
 .logo-name {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-size: 18;
   font-weight: 800;
   color: var(--navy);
   line-height: 1;
@@ -1469,23 +1468,43 @@ footer {
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
-@media (max-width: 1200px) {
+
+@media (max-width: 1280px) {
   .boilers-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .shapes {
+    display: none;
+  }
+  .header-nav {
+    margin: auto;
   }
   .hero-split {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 1024px) {
+  .hero-h1 .hero-br {
+    display: none;
+  }
+
   .hero-split-right {
     display: none;
   }
   .hero-split-left {
     padding: 64px 32px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .advantages-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
   .credit-inner {
     grid-template-columns: 1fr;
@@ -1493,19 +1512,15 @@ footer {
   .credit-right {
     min-height: 300px;
   }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-  }
-  .advantages-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+
   .consultation-grid {
     grid-template-columns: 1fr;
   }
   .trust-points {
     grid-template-columns: 1fr;
+  }
+  .faq-list {
+    max-width: 100%;
   }
   .pt-table th,
   .pt-table td {
@@ -1514,8 +1529,108 @@ footer {
   .pt-block-head {
     padding: 20px;
   }
+  .boilers {
+    padding: 40px 0;
+  }
+  .why-us {
+    padding: 60px 0;
+  }
+  .section-hd {
+    margin-bottom: 30px;
+  }
+  .services {
+    padding-bottom: 40px;
+  }
+  .services-cta {
+    margin-top: 20px;
+  }
+  .credit-section {
+    padding: 40px 0;
+  }
+  .portfolio {
+    padding: 60px 0 40px;
+  }
+  .pricing {
+    padding: 60px 0;
+  }
+
+  .services-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-row-cat span {
+    font-size: 24px;
+  }
+  .display-title {
+    font-size: clamp(30px, 3.5vw, 40px);
+  }
+  .problem-sol {
+    font-size: 20px;
+  }
+  .problem-num {
+    font-size: 50px;
+  }
+  .problem-item {
+    gap: 24px;
+  }
+  .services-row:first-child {
+    padding-top: 0;
+  }
+  .advantages-block-title {
+    font-size: clamp(30px, 3.5vw, 40px);
+  }
+  .advantage-icon-wrap {
+    width: 60px;
+    height: 60px;
+  }
+  .advantage-icon-wrap svg {
+    width: 30px;
+    height: 30px;
+  }
+  .pt-price {
+    font-size: 20px;
+  }
+  .portfolio-hd {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
 }
+
+@media (max-width: 1000px) {
+  .credit-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .credit-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .advantages-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .advantages-block {
+    padding: 36px 24px;
+  }
+  .advantage-item {
+    background: var(--cream);
+    border-radius: 22px;
+    padding: 24px 10px;
+  }
+  .advantage-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 768px) {
+  .display-title {
+    font-size: clamp(24px, 2.5vw, 30px);
+  }
+  .advantages-block-title {
+    font-size: clamp(24px, 2.5vw, 30px);
+    margin-bottom: 16px;
+  }
+
   .container {
     padding: 0 20px;
   }
@@ -1524,6 +1639,15 @@ footer {
   }
   .header-geo {
     display: none;
+  }
+  .header-phone {
+    display: none;
+  }
+  .hero-split-left {
+    padding: 48px 20px;
+  }
+  .hero-checklist {
+    grid-template-columns: 1fr;
   }
   .services-row {
     grid-template-columns: 1fr;
@@ -1535,15 +1659,7 @@ footer {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero-split-left {
-    padding: 48px 20px;
-  }
-  .hero-checklist {
-    grid-template-columns: 1fr;
-  }
-  .faq-item summary {
-    font-size: 17px;
-  }
+
   .problem-item {
     gap: 20px;
   }
@@ -1551,11 +1667,8 @@ footer {
     font-size: 40px;
     width: 44px;
   }
-  .advantages-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .advantages-block {
-    padding: 36px 24px;
+  .portfolio-hd {
+    margin-bottom: 20px;
   }
   .credit-left {
     padding: 40px 28px;
@@ -1578,7 +1691,123 @@ footer {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .header-phone {
-    display: none;
+  .form-card {
+    padding: 32px 24px;
+  }
+  .faq {
+    padding: 48px 0 56px;
+  }
+  .faq-list {
+    gap: 10px;
+  }
+  .faq-item {
+    padding: 0 16px;
+  }
+  .faq-item summary {
+    font-size: 17px;
+  }
+  .slider-controls {
+    align-self: flex-end;
+  }
+  .credit-card {
+    padding: 24px;
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-h1 {
+    font-size: 36px;
+  }
+  .logo {
+    gap: 0px;
+  }
+  .logo-mark > img {
+    width: 30px;
+  }
+  .logo-name {
+    font-size: 14px;
+  }
+  .logo-tag {
+    font-size: 12px;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .hero-split-left {
+    padding: 40px 0;
+  }
+  .hero-btns {
+    flex-direction: column;
+  }
+  .section-sub {
+    font-size: 16px;
+  }
+  .btn-lg {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+  .boilers-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  .credit-cards {
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+  }
+  .section-hd {
+    margin-bottom: 30px;
+  }
+  .pt-table th,
+  .pt-table td {
+    padding: 12px 14px;
+  }
+  .pt-service-name {
+    font-size: 14px;
+  }
+  .pt-price {
+    font-size: 18px;
+  }
+  .sidebar-card {
+    padding: 24px 20px;
+  }
+  .phone-card {
+    padding: 24px 20px;
+  }
+  .phone-card-number {
+    font-size: 26px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .faq {
+    padding: 40px 0 48px;
+  }
+  .faq-list {
+    gap: 8px;
+  }
+  .faq-item {
+    padding: 0 14px;
+    border-radius: 12px;
+  }
+  .faq-item summary {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+  .faq-item p {
+    font-size: 14px;
+    padding-bottom: 14px;
+  }
+  .problem-item {
+    flex-direction: column;
+  }
+  .services-row-cat span{
+    font-size: 18px;
   }
 }

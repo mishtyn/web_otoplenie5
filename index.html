@@ -6,7 +6,8 @@
     <meta name="yandex-verification" content="ea4a9a201187836b" />
 
     <title>
-      Монтаж и установка котлов в Минске и области - цены, гарантия 5 лет | Otoplenie Belarus
+      Монтаж и установка котлов в Минске и области - цены, гарантия 5 лет |
+      Otoplenie Belarus
     </title>
     <meta
       name="description"
@@ -263,7 +264,7 @@
       <div class="hero-split container">
         <div class="hero-split-left">
           <h1 class="hero-h1">
-            Установка котлов<br />и отопительных<br />систем
+            Установка котлов <br class="hero-br" />и отопительных <br />систем
             <em>под ключ</em>
           </h1>
           <p class="hero-desc">
@@ -1549,13 +1550,31 @@
                 </div>
               </div>
               <div class="footer-contact-item">
-                <svg class="footer-contact-ic" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  class="footer-contact-ic"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <rect x="2" y="2" width="20" height="20" rx="5" />
                   <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.5"
+                    fill="currentColor"
+                    stroke="none"
+                  />
                 </svg>
                 <div>
-                  <a href="https://www.instagram.com/otoplenie5.by" class="footer-contact-a" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a
+                    href="https://www.instagram.com/otoplenie5.by"
+                    class="footer-contact-a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
                   <span class="footer-contact-sub">@otoplenie5.by</span>
                 </div>
               </div>
@@ -1608,7 +1627,9 @@
       });
       document.querySelectorAll('a[href="#consultation"]').forEach((link) => {
         link.addEventListener("click", () => {
-          trackGoal("cta_consultation_click", { text: link.textContent.trim() });
+          trackGoal("cta_consultation_click", {
+            text: link.textContent.trim(),
+          });
         });
       });
       document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
@@ -1689,16 +1710,16 @@
       class FaqAccordion {
         constructor(el) {
           this.el = el;
-          this.summary = el.querySelector('summary');
-          this.content = el.querySelector('p');
+          this.summary = el.querySelector("summary");
+          this.content = el.querySelector("p");
           this.animation = null;
           this.isClosing = false;
           this.isExpanding = false;
-          this.summary.addEventListener('click', (e) => this.onClick(e));
+          this.summary.addEventListener("click", (e) => this.onClick(e));
         }
         onClick(e) {
           e.preventDefault();
-          this.el.style.overflow = 'hidden';
+          this.el.style.overflow = "hidden";
           if (this.isClosing || !this.el.open) {
             this.open();
           } else if (this.isExpanding || this.el.open) {
@@ -1712,10 +1733,12 @@
           if (this.animation) this.animation.cancel();
           this.animation = this.el.animate(
             { height: [startHeight, endHeight] },
-            { duration: 380, easing: 'ease-in-out' }
+            { duration: 380, easing: "ease-in-out" },
           );
           this.animation.onfinish = () => this.onFinish(false);
-          this.animation.oncancel = () => { this.isClosing = false; };
+          this.animation.oncancel = () => {
+            this.isClosing = false;
+          };
         }
         open() {
           this.el.style.height = `${this.el.offsetHeight}px`;
@@ -1729,21 +1752,25 @@
           if (this.animation) this.animation.cancel();
           this.animation = this.el.animate(
             { height: [startHeight, endHeight] },
-            { duration: 380, easing: 'ease-in-out' }
+            { duration: 380, easing: "ease-in-out" },
           );
           this.animation.onfinish = () => this.onFinish(true);
-          this.animation.oncancel = () => { this.isExpanding = false; };
+          this.animation.oncancel = () => {
+            this.isExpanding = false;
+          };
         }
         onFinish(open) {
           this.el.open = open;
           this.animation = null;
           this.isClosing = false;
           this.isExpanding = false;
-          this.el.style.height = '';
-          this.el.style.overflow = '';
+          this.el.style.height = "";
+          this.el.style.overflow = "";
         }
       }
-      document.querySelectorAll('.faq-item').forEach(el => new FaqAccordion(el));
+      document
+        .querySelectorAll(".faq-item")
+        .forEach((el) => new FaqAccordion(el));
 
       // Form submit
       document
