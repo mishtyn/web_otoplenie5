@@ -275,7 +275,7 @@
             <a href="#consultation" class="btn btn-orange btn-lg"
               >Получить консультацию</a
             >
-            <a href="#boiler-types" class="btn btn-navy btn-lg">Наши работы</a>
+            <a href="#portfolio" class="btn btn-navy btn-lg">Наши работы</a>
           </div>
           <div class="hero-checklist">
             <div class="adv-item">
@@ -1291,7 +1291,7 @@
             </p>
           </details>
         </div>
-        <div style="text-align: center; margin-top: 28px" class="reveal">
+        <div style="text-align: center; margin-top: 24px" class="reveal">
           <a href="#consultation" class="btn btn-orange btn-lg"
             >Получить консультацию инженера</a
           >
@@ -1771,6 +1771,91 @@
       document
         .querySelectorAll(".faq-item")
         .forEach((el) => new FaqAccordion(el));
+
+      // Services row accordion (mobile only)
+      {
+        const mq = window.matchMedia("(max-width: 1000px)");
+
+        class ServicesRowAccordion {
+          constructor(row) {
+            this.row = row;
+            this.header = row.querySelector(".services-row-cat");
+            this.content = row.querySelector(".services-tags");
+            this.anim = null;
+            this.isOpen = false;
+            if (!this.header || !this.content) return;
+            this.header.addEventListener("click", () => {
+              if (mq.matches) this.toggle();
+            });
+          }
+          toggle() {
+            this.isOpen ? this.close() : this.expand();
+          }
+          expand() {
+            this.isOpen = true;
+            this.row.classList.add("is-open");
+            const h = this.content.scrollHeight;
+            if (this.anim) this.anim.cancel();
+            this.content.style.overflow = "hidden";
+            this.anim = this.content.animate(
+              { height: ["0px", `${h}px`] },
+              { duration: 380, easing: "ease-in-out" },
+            );
+            this.anim.onfinish = () => {
+              this.content.style.cssText = "";
+              this.anim = null;
+            };
+            this.anim.oncancel = () => {
+              this.isOpen = false;
+            };
+          }
+          close() {
+            this.isOpen = false;
+            this.row.classList.remove("is-open");
+            const h = this.content.offsetHeight;
+            if (this.anim) this.anim.cancel();
+            this.content.style.overflow = "hidden";
+            this.anim = this.content.animate(
+              { height: [`${h}px`, "0px"] },
+              { duration: 380, easing: "ease-in-out" },
+            );
+            this.anim.onfinish = () => {
+              this.content.style.height = "0";
+              this.content.style.overflow = "hidden";
+              this.anim = null;
+            };
+            this.anim.oncancel = () => {
+              this.isOpen = true;
+            };
+          }
+          setMobile() {
+            if (this.anim) this.anim.cancel();
+            this.isOpen = false;
+            this.row.classList.remove("is-open");
+            this.content.style.height = "0";
+            this.content.style.overflow = "hidden";
+          }
+          setDesktop() {
+            if (this.anim) this.anim.cancel();
+            this.isOpen = true;
+            this.row.classList.add("is-open");
+            this.content.style.height = "";
+            this.content.style.overflow = "";
+          }
+        }
+
+        const rowAccordions = Array.from(
+          document.querySelectorAll(".services-row"),
+        ).map((row) => new ServicesRowAccordion(row));
+
+        const initRows = (mobile) =>
+          rowAccordions.forEach((a) =>
+            mobile ? a.setMobile() : a.setDesktop(),
+          );
+
+        initRows(mq.matches);
+        mq.addEventListener("change", (e) => initRows(e.matches));
+      }
 
       // Form submit
       document

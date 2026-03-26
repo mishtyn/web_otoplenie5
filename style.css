@@ -1488,6 +1488,27 @@ footer {
   }
 }
 
+@media (max-width: 1000px) {
+  .services-row-cat {
+    cursor: pointer;
+    justify-content: space-between;
+  }
+  .services-row-cat::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--navy);
+    border-bottom: 2px solid var(--navy);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-top: -2px;
+  }
+  .services-row.is-open .services-row-cat::after {
+    transform: rotate(-135deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-h1 .hero-br {
     display: none;
@@ -1524,7 +1545,7 @@ footer {
   }
   .pt-table th,
   .pt-table td {
-    padding: 14px 20px;
+    padding: 14px;
   }
   .pt-block-head {
     padding: 20px;
@@ -1551,7 +1572,7 @@ footer {
     padding: 60px 0 40px;
   }
   .pricing {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .services-row {
@@ -1559,7 +1580,7 @@ footer {
     flex-direction: column;
   }
   .services-row-cat span {
-    font-size: 24px;
+    font-size: 20px;
   }
   .display-title {
     font-size: clamp(30px, 3.5vw, 40px);
@@ -1626,9 +1647,17 @@ footer {
   .display-title {
     font-size: clamp(24px, 2.5vw, 30px);
   }
+  .pt-table th:nth-child(2),
+  .pt-table td:nth-child(2) {
+    display: none;
+  }
+  .pt-table th,
+  .pt-table td {
+    padding: 14px 16px;
+  }
   .advantages-block-title {
     font-size: clamp(24px, 2.5vw, 30px);
-    margin-bottom: 16px;
+    margin-bottom: 36px;
   }
 
   .container {
@@ -1713,6 +1742,12 @@ footer {
     padding: 24px;
     width: auto;
   }
+  .pt-table th:last-child {
+    width: 190px;
+  }
+  .pricing-footnote {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1763,15 +1798,32 @@ footer {
   .section-hd {
     margin-bottom: 30px;
   }
-  .pt-table th,
+  .pt-table thead {
+    display: none;
+  }
+  .pt-table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-top: 1px solid var(--border);
+  }
   .pt-table td {
-    padding: 12px 14px;
+    display: block;
+    padding: 0;
+    border: none;
+  }
+  .pt-table td:nth-child(2) {
+    display: none;
   }
   .pt-service-name {
     font-size: 14px;
   }
   .pt-price {
-    font-size: 18px;
+    font-size: 17px;
+    text-align: right;
+    flex-shrink: 0;
   }
   .sidebar-card {
     padding: 24px 20px;
@@ -1787,7 +1839,7 @@ footer {
     align-items: flex-start;
   }
   .faq {
-    padding: 40px 0 48px;
+    padding: 40px 0 60px;
   }
   .faq-list {
     gap: 8px;
@@ -1807,7 +1859,32 @@ footer {
   .problem-item {
     flex-direction: column;
   }
-  .services-row-cat span{
+  .consultation {
+    padding: 40px 0;
+  }
+  .services-row-cat span {
     font-size: 18px;
+  }
+  .problems-list {
+    margin-bottom: 20px;
+  }
+  .advantages-block {
+    padding: 34px 16px;
+  }
+  .pt-block-title {
+    font-size: 16px;
+  }
+  .pt-block-head {
+    padding: 10px 16px;
+  }
+  .pt-block-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .pt-block-icon svg {
+    width: 16px;
+  }
+  .consultation-grid {
+    gap: 24px;
   }
 }
