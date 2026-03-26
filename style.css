@@ -101,6 +101,32 @@ body {
 .section-hd {
   margin-bottom: 40px;
 }
+.trust-points {
+  margin: 18px auto 0;
+  max-width: 920px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  text-align: left;
+}
+.trust-points li {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.trust-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
 
 /* ─── BUTTONS ────────────────────────────────────── */
 .btn {
@@ -1094,6 +1120,40 @@ header.scrolled {
   color: var(--navy);
 }
 
+/* ─── FAQ ─────────────────────────────────────────── */
+.faq {
+  padding: 78px 0;
+  background: var(--white);
+}
+.faq-list {
+  display: grid;
+  gap: 14px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--cream);
+  padding: 0 20px;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 18px 0;
+  font-size: 18px;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item p {
+  color: var(--smoke);
+  line-height: 1.6;
+  padding-bottom: 18px;
+}
+
 /* ─── CONSULTATION FORM ──────────────────────────── */
 .consultation {
   background: var(--cream);
@@ -1443,6 +1503,9 @@ footer {
   .consultation-grid {
     grid-template-columns: 1fr;
   }
+  .trust-points {
+    grid-template-columns: 1fr;
+  }
   .pt-table th,
   .pt-table td {
     padding: 14px 20px;
@@ -1476,6 +1539,9 @@ footer {
   }
   .hero-checklist {
     grid-template-columns: 1fr;
+  }
+  .faq-item summary {
+    font-size: 17px;
   }
   .problem-item {
     gap: 20px;
