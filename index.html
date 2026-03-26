@@ -1448,12 +1448,37 @@
       });
 
       // Form submit
-      document.getElementById("lead-form").addEventListener("submit", (e) => {
+      document.getElementById("lead-form").addEventListener("submit", async (e) => {
         e.preventDefault();
         const btn = document.getElementById("submit-btn");
-        btn.textContent = "✓ Заявка отправлена!";
-        btn.style.background = "#27AE60";
+        const form = e.target;
+
         btn.disabled = true;
+        btn.textContent = "Отправка...";
+
+        try {
+          const res = await fetch("send.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: form.name.value,
+              phone: form.phone.value,
+              message: form.message.value,
+            }),
+          });
+          const data = await res.json();
+          if (data.status === "ok") {
+            btn.textContent = "✓ Заявка отправлена!";
+            btn.style.background = "#27AE60";
+            form.reset();
+          } else {
+            throw new Error(data.message || "Ошибка");
+          }
+        } catch {
+          btn.textContent = "Ошибка, попробуйте снова";
+          btn.style.background = "#E74C3C";
+          btn.disabled = false;
+        }
       });
     </script>
   </body>
