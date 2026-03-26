@@ -1072,7 +1072,7 @@ header.scrolled {
 }
 .pt-table th:last-child {
   text-align: right;
-  width: 160px;
+  width: 200px;
 }
 .pt-table tbody tr {
   border-top: 1px solid var(--border);
@@ -1122,7 +1122,7 @@ header.scrolled {
 
 /* ─── FAQ ─────────────────────────────────────────── */
 .faq {
-  padding: 78px 0;
+  padding: 60px 0 80px;
   background: var(--white);
 }
 .faq-list {
@@ -1136,6 +1136,7 @@ header.scrolled {
   border-radius: 14px;
   background: var(--cream);
   padding: 0 20px;
+  overflow: hidden;
 }
 .faq-item summary {
   list-style: none;
@@ -1157,7 +1158,7 @@ header.scrolled {
 /* ─── CONSULTATION FORM ──────────────────────────── */
 .consultation {
   background: var(--cream);
-  padding-bottom: 80px;
+  padding: 60px 0;
 }
 .consultation .section-hd {
   text-align: center;

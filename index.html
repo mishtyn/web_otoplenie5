@@ -970,7 +970,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1045,7 +1045,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1127,7 +1127,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1186,7 +1186,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1684,6 +1684,66 @@
           if (sectionEl) sectionObserver.observe(sectionEl);
         },
       );
+
+      // FAQ accordion animation (via css-tricks.com/how-to-animate-the-details-element-using-waapi/)
+      class FaqAccordion {
+        constructor(el) {
+          this.el = el;
+          this.summary = el.querySelector('summary');
+          this.content = el.querySelector('p');
+          this.animation = null;
+          this.isClosing = false;
+          this.isExpanding = false;
+          this.summary.addEventListener('click', (e) => this.onClick(e));
+        }
+        onClick(e) {
+          e.preventDefault();
+          this.el.style.overflow = 'hidden';
+          if (this.isClosing || !this.el.open) {
+            this.open();
+          } else if (this.isExpanding || this.el.open) {
+            this.shrink();
+          }
+        }
+        shrink() {
+          this.isClosing = true;
+          const startHeight = `${this.el.offsetHeight}px`;
+          const endHeight = `${this.summary.offsetHeight}px`;
+          if (this.animation) this.animation.cancel();
+          this.animation = this.el.animate(
+            { height: [startHeight, endHeight] },
+            { duration: 380, easing: 'ease-in-out' }
+          );
+          this.animation.onfinish = () => this.onFinish(false);
+          this.animation.oncancel = () => { this.isClosing = false; };
+        }
+        open() {
+          this.el.style.height = `${this.el.offsetHeight}px`;
+          this.el.open = true;
+          requestAnimationFrame(() => this.expand());
+        }
+        expand() {
+          this.isExpanding = true;
+          const startHeight = `${this.el.offsetHeight}px`;
+          const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+          if (this.animation) this.animation.cancel();
+          this.animation = this.el.animate(
+            { height: [startHeight, endHeight] },
+            { duration: 380, easing: 'ease-in-out' }
+          );
+          this.animation.onfinish = () => this.onFinish(true);
+          this.animation.oncancel = () => { this.isExpanding = false; };
+        }
+        onFinish(open) {
+          this.el.open = open;
+          this.animation = null;
+          this.isClosing = false;
+          this.isExpanding = false;
+          this.el.style.height = '';
+          this.el.style.overflow = '';
+        }
+      }
+      document.querySelectorAll('.faq-item').forEach(el => new FaqAccordion(el));
 
       // Form submit
       document
