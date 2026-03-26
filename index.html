@@ -1884,7 +1884,13 @@
               btn.textContent = "✓ Заявка отправлена!";
               btn.style.background = "#27AE60";
               form.reset();
+              setTimeout(() => {
+                btn.textContent = "Отправить заявку";
+                btn.style.background = "";
+                btn.disabled = false;
+              }, 5000);
             } else {
+              
               throw new Error(data.message || "Ошибка");
             }
           } catch {
@@ -1892,6 +1898,10 @@
             btn.textContent = "Ошибка, попробуйте снова";
             btn.style.background = "#E74C3C";
             btn.disabled = false;
+            setTimeout(() => {
+              btn.textContent = "Отправить заявку";
+              btn.style.background = "";
+            }, 5000);
           }
         });
     </script>
