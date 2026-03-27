@@ -6,7 +6,8 @@
     <meta name="yandex-verification" content="ea4a9a201187836b" />
 
     <title>
-      Монтаж и установка котлов в Минске и области - цены, гарантия 5 лет | Otoplenie Belarus
+      Монтаж и установка котлов в Минске и области - цены, гарантия 5 лет |
+      Otoplenie Belarus
     </title>
     <meta
       name="description"
@@ -263,7 +264,7 @@
       <div class="hero-split container">
         <div class="hero-split-left">
           <h1 class="hero-h1">
-            Установка котлов<br />и отопительных<br />систем
+            Установка котлов <br class="hero-br" />и отопительных <br />систем
             <em>под ключ</em>
           </h1>
           <p class="hero-desc">
@@ -274,7 +275,7 @@
             <a href="#consultation" class="btn btn-orange btn-lg"
               >Получить консультацию</a
             >
-            <a href="#boiler-types" class="btn btn-navy btn-lg">Наши работы</a>
+            <a href="#portfolio" class="btn btn-navy btn-lg">Наши работы</a>
           </div>
           <div class="hero-checklist">
             <div class="adv-item">
@@ -970,7 +971,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1045,7 +1046,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1127,7 +1128,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1186,7 +1187,7 @@
                 <tr>
                   <th>Услуга</th>
                   <th>Единица</th>
-                  <th style="text-align: right">Стоимость</th>
+                  <th style="text-align: right">Стоимость, BYN</th>
                 </tr>
               </thead>
               <tbody>
@@ -1290,7 +1291,7 @@
             </p>
           </details>
         </div>
-        <div style="text-align: center; margin-top: 28px" class="reveal">
+        <div style="text-align: center; margin-top: 24px" class="reveal">
           <a href="#consultation" class="btn btn-orange btn-lg"
             >Получить консультацию инженера</a
           >
@@ -1549,13 +1550,31 @@
                 </div>
               </div>
               <div class="footer-contact-item">
-                <svg class="footer-contact-ic" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  class="footer-contact-ic"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <rect x="2" y="2" width="20" height="20" rx="5" />
                   <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.5"
+                    fill="currentColor"
+                    stroke="none"
+                  />
                 </svg>
                 <div>
-                  <a href="https://www.instagram.com/otoplenie5.by" class="footer-contact-a" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a
+                    href="https://www.instagram.com/otoplenie5.by"
+                    class="footer-contact-a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
                   <span class="footer-contact-sub">@otoplenie5.by</span>
                 </div>
               </div>
@@ -1608,7 +1627,9 @@
       });
       document.querySelectorAll('a[href="#consultation"]').forEach((link) => {
         link.addEventListener("click", () => {
-          trackGoal("cta_consultation_click", { text: link.textContent.trim() });
+          trackGoal("cta_consultation_click", {
+            text: link.textContent.trim(),
+          });
         });
       });
       document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
@@ -1685,6 +1706,157 @@
         },
       );
 
+      // FAQ accordion animation (via css-tricks.com/how-to-animate-the-details-element-using-waapi/)
+      class FaqAccordion {
+        constructor(el) {
+          this.el = el;
+          this.summary = el.querySelector("summary");
+          this.content = el.querySelector("p");
+          this.animation = null;
+          this.isClosing = false;
+          this.isExpanding = false;
+          this.summary.addEventListener("click", (e) => this.onClick(e));
+        }
+        onClick(e) {
+          e.preventDefault();
+          this.el.style.overflow = "hidden";
+          if (this.isClosing || !this.el.open) {
+            this.open();
+          } else if (this.isExpanding || this.el.open) {
+            this.shrink();
+          }
+        }
+        shrink() {
+          this.isClosing = true;
+          const startHeight = `${this.el.offsetHeight}px`;
+          const endHeight = `${this.summary.offsetHeight}px`;
+          if (this.animation) this.animation.cancel();
+          this.animation = this.el.animate(
+            { height: [startHeight, endHeight] },
+            { duration: 380, easing: "ease-in-out" },
+          );
+          this.animation.onfinish = () => this.onFinish(false);
+          this.animation.oncancel = () => {
+            this.isClosing = false;
+          };
+        }
+        open() {
+          this.el.style.height = `${this.el.offsetHeight}px`;
+          this.el.open = true;
+          requestAnimationFrame(() => this.expand());
+        }
+        expand() {
+          this.isExpanding = true;
+          const startHeight = `${this.el.offsetHeight}px`;
+          const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+          if (this.animation) this.animation.cancel();
+          this.animation = this.el.animate(
+            { height: [startHeight, endHeight] },
+            { duration: 380, easing: "ease-in-out" },
+          );
+          this.animation.onfinish = () => this.onFinish(true);
+          this.animation.oncancel = () => {
+            this.isExpanding = false;
+          };
+        }
+        onFinish(open) {
+          this.el.open = open;
+          this.animation = null;
+          this.isClosing = false;
+          this.isExpanding = false;
+          this.el.style.height = "";
+          this.el.style.overflow = "";
+        }
+      }
+      document
+        .querySelectorAll(".faq-item")
+        .forEach((el) => new FaqAccordion(el));
+
+      // Services row accordion (mobile only)
+      {
+        const mq = window.matchMedia("(max-width: 1000px)");
+
+        class ServicesRowAccordion {
+          constructor(row) {
+            this.row = row;
+            this.header = row.querySelector(".services-row-cat");
+            this.content = row.querySelector(".services-tags");
+            this.anim = null;
+            this.isOpen = false;
+            if (!this.header || !this.content) return;
+            this.header.addEventListener("click", () => {
+              if (mq.matches) this.toggle();
+            });
+          }
+          toggle() {
+            this.isOpen ? this.close() : this.expand();
+          }
+          expand() {
+            this.isOpen = true;
+            this.row.classList.add("is-open");
+            const h = this.content.scrollHeight;
+            if (this.anim) this.anim.cancel();
+            this.content.style.overflow = "hidden";
+            this.anim = this.content.animate(
+              { height: ["0px", `${h}px`] },
+              { duration: 380, easing: "ease-in-out" },
+            );
+            this.anim.onfinish = () => {
+              this.content.style.cssText = "";
+              this.anim = null;
+            };
+            this.anim.oncancel = () => {
+              this.isOpen = false;
+            };
+          }
+          close() {
+            this.isOpen = false;
+            this.row.classList.remove("is-open");
+            const h = this.content.offsetHeight;
+            if (this.anim) this.anim.cancel();
+            this.content.style.overflow = "hidden";
+            this.anim = this.content.animate(
+              { height: [`${h}px`, "0px"] },
+              { duration: 380, easing: "ease-in-out" },
+            );
+            this.anim.onfinish = () => {
+              this.content.style.height = "0";
+              this.content.style.overflow = "hidden";
+              this.anim = null;
+            };
+            this.anim.oncancel = () => {
+              this.isOpen = true;
+            };
+          }
+          setMobile() {
+            if (this.anim) this.anim.cancel();
+            this.isOpen = false;
+            this.row.classList.remove("is-open");
+            this.content.style.height = "0";
+            this.content.style.overflow = "hidden";
+          }
+          setDesktop() {
+            if (this.anim) this.anim.cancel();
+            this.isOpen = true;
+            this.row.classList.add("is-open");
+            this.content.style.height = "";
+            this.content.style.overflow = "";
+          }
+        }
+
+        const rowAccordions = Array.from(
+          document.querySelectorAll(".services-row"),
+        ).map((row) => new ServicesRowAccordion(row));
+
+        const initRows = (mobile) =>
+          rowAccordions.forEach((a) =>
+            mobile ? a.setMobile() : a.setDesktop(),
+          );
+
+        initRows(mq.matches);
+        mq.addEventListener("change", (e) => initRows(e.matches));
+      }
+
       // Form submit
       document
         .getElementById("lead-form")
@@ -1712,7 +1884,13 @@
               btn.textContent = "✓ Заявка отправлена!";
               btn.style.background = "#27AE60";
               form.reset();
+              setTimeout(() => {
+                btn.textContent = "Отправить заявку";
+                btn.style.background = "";
+                btn.disabled = false;
+              }, 5000);
             } else {
+              
               throw new Error(data.message || "Ошибка");
             }
           } catch {
@@ -1720,6 +1898,10 @@
             btn.textContent = "Ошибка, попробуйте снова";
             btn.style.background = "#E74C3C";
             btn.disabled = false;
+            setTimeout(() => {
+              btn.textContent = "Отправить заявку";
+              btn.style.background = "";
+            }, 5000);
           }
         });
     </script>
