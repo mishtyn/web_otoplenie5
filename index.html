@@ -247,14 +247,37 @@
             <a href="#faq" class="nav-link">FAQ</a>
           </nav>
           <div class="header-right">
-            <a href="#consultation" class="btn btn-orange btn-hover-phone">
+            <a href="#consultation" class="btn btn-orange btn-hover-phone header-cta-desktop">
               <span class="btn-text-default">Заказать звонок</span>
               <span class="btn-text-hover">+375 (29) 637-53-33</span>
             </a>
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#services" class="mobile-nav-link">Наши услуги</a>
+        <a href="#why-us" class="mobile-nav-link">Почему мы?</a>
+        <a href="#pricing" class="mobile-nav-link">Цены</a>
+        <a href="#portfolio" class="mobile-nav-link">Работы</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="#consultation" class="btn btn-orange btn-hover-phone mobile-menu-cta">
+          <span class="btn-text-default">Заказать звонок</span>
+          <span class="btn-text-hover">+375 (29) 637-53-33</span>
+        </a>
+        <a href="tel:+375296375333" class="mobile-menu-phone">+375 (29) 637-53-33</a>
+      </div>
+    </div>
     <div class="shapes">
       <img alt="" src="./assets/shapes.png" loading="lazy" decoding="async" />
     </div>
@@ -829,7 +852,7 @@
           <div class="slider-controls">
             <button class="slider-btn" id="prev-btn">&#8592;</button>
             <div class="slider-count">
-              <span id="cur-slide">1</span> <span>/ 3</span>
+              <span id="cur-slide">1</span> <span>/ 6</span>
             </div>
             <button class="slider-btn" id="next-btn">&#8594;</button>
           </div>
@@ -936,12 +959,183 @@
                 </div>
               </div>
             </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div class="slide-inner">
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide4_1.jpg"
+                    alt="Монтаж системы отопления в доме"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минск</div>
+                    <div class="slide-proj">Монтаж системы отопления</div>
+                  </div>
+                </div>
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide4_2.jpg"
+                    alt="Теплый пол"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минск</div>
+                    <div class="slide-proj">Теплый пол</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+              <div class="slide-inner">
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide5_1.jpg"
+                    alt="Котельная под ключ в частном доме"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минская область</div>
+                    <div class="slide-proj">Котельная под ключ</div>
+                  </div>
+                </div>
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide5_2.jpg"
+                    alt="Установка радиаторов"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минская область</div>
+                    <div class="slide-proj">Установка радиаторов</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+              <div class="slide-inner">
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide6_1.jpg"
+                    alt="Разводка труб отопления в доме"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минск</div>
+                    <div class="slide-proj">Разводка труб отопления</div>
+                  </div>
+                </div>
+                <div class="slide-half">
+                  <img
+                    src="assets/portfolio/slide6_2.jpg"
+                    alt="Установка газового котла Bosch"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="slide-overlay"></div>
+                  <div class="slide-info">
+                    <div class="slide-loc">Минск</div>
+                    <div class="slide-proj">Установка котла Bosch</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="slider-dots">
           <div class="dot active" data-slide="0"></div>
           <div class="dot" data-slide="1"></div>
           <div class="dot" data-slide="2"></div>
+          <div class="dot" data-slide="3"></div>
+          <div class="dot" data-slide="4"></div>
+          <div class="dot" data-slide="5"></div>
+        </div>
+
+        <!-- Mobile slider: 6 slides × 1 photo -->
+        <div class="mobile-slider-wrap">
+          <div class="mobile-slider-track-wrap">
+          <div class="mobile-slider-track" id="mobile-slider-track">
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide1_1.jpg" alt="Монтаж электрического бойлера в Минске" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Монтаж электрического бойлера</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide1_2.jpg" alt="Установка газового котла в частном доме" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Газовый котел</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide2_1.jpg" alt="Монтаж котельной под ключ в Минске" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Монтаж котельной</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide2_2.jpg" alt="Автономное отопление с тёплым полом" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Автономное отопление + тёплый пол</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="/assets/portfolio/slide3_1.jpg" alt="Монтаж электрокотла в коттедже" loading="lazy" decoding="async" />
+              <div class="slide-before-overlay"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Монтаж электрокотла</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="/assets/portfolio/slide3_2.jpg" alt="Установка водонагревателя" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минская обл., Борисов</div><div class="slide-proj">Установка водонагревателя</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide4_1.jpg" alt="Монтаж системы отопления в доме" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Монтаж системы отопления</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide4_2.jpg" alt="Установка радиаторов в квартире" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Установка радиаторов</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide5_1.jpg" alt="Котельная под ключ в частном доме" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минская область</div><div class="slide-proj">Котельная под ключ</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide5_2.jpg" alt="Монтаж тёплого пола в коттедже" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минская область</div><div class="slide-proj">Тёплый пол</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide6_1.jpg" alt="Разводка труб отопления в доме" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Разводка труб отопления</div></div>
+            </div>
+            <div class="mobile-slide">
+              <img src="assets/portfolio/slide6_2.jpg" alt="Установка газового котла Bosch" loading="lazy" decoding="async" />
+              <div class="slide-overlay"></div>
+              <div class="slide-info"><div class="slide-loc">Минск</div><div class="slide-proj">Установка котла Bosch</div></div>
+            </div>
+          </div>
+          </div>
+          <div class="mobile-slider-controls">
+            <button class="slider-btn" id="m-prev-btn">&#8592;</button>
+            <div class="slider-count"><span id="m-cur-slide">1</span> <span>/ 12</span></div>
+            <button class="slider-btn" id="m-next-btn">&#8594;</button>
+          </div>
+          <div class="mobile-slider-dots" id="mobile-slider-dots"></div>
         </div>
       </div>
     </section>
@@ -1614,6 +1808,42 @@
         header.classList.toggle("scrolled", window.scrollY > 40);
       });
 
+      // Burger menu
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOverlay = document.getElementById("menuOverlay");
+
+      const logoImg = document.querySelector(".logo-mark img");
+
+      function openMenu() {
+        burgerBtn.classList.add("open");
+        burgerBtn.setAttribute("aria-expanded", "true");
+        mobileMenu.classList.add("open");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        menuOverlay.classList.add("open");
+        header.classList.add("menu-open");
+        logoImg.src = "/assets/white-logo.svg";
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        burgerBtn.classList.remove("open");
+        burgerBtn.setAttribute("aria-expanded", "false");
+        mobileMenu.classList.remove("open");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        menuOverlay.classList.remove("open");
+        header.classList.remove("menu-open");
+        logoImg.src = "/assets/logo.svg";
+        document.body.style.overflow = "";
+      }
+
+      burgerBtn.addEventListener("click", () => {
+        burgerBtn.classList.contains("open") ? closeMenu() : openMenu();
+      });
+      menuOverlay.addEventListener("click", closeMenu);
+      mobileMenu.querySelectorAll(".mobile-nav-link, .mobile-menu-cta").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
       // Smooth anchor scroll
       document.querySelectorAll('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (e) => {
@@ -1638,19 +1868,18 @@
         });
       });
 
-      // Slider
+      // Desktop slider
       let currentSlide = 0;
-      const TOTAL = 3;
+      const TOTAL = 6;
+      const sliderTrack = document.getElementById("slider-track");
 
       function updateSlider() {
-        document.getElementById("slider-track").style.transform =
-          `translateX(-${currentSlide * 100}%)`;
+        sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
         document.getElementById("cur-slide").textContent = currentSlide + 1;
-        document.querySelectorAll(".dot").forEach((d, i) => {
+        document.querySelectorAll(".slider-dots .dot").forEach((d, i) => {
           d.classList.toggle("active", i === currentSlide);
         });
       }
-
       document.getElementById("prev-btn").addEventListener("click", () => {
         currentSlide = (currentSlide - 1 + TOTAL) % TOTAL;
         updateSlider();
@@ -1659,7 +1888,7 @@
         currentSlide = (currentSlide + 1) % TOTAL;
         updateSlider();
       });
-      document.querySelectorAll(".dot").forEach((dot) => {
+      document.querySelectorAll(".slider-dots .dot").forEach((dot) => {
         dot.addEventListener("click", () => {
           currentSlide = Number(dot.dataset.slide);
           updateSlider();
@@ -1668,7 +1897,40 @@
       setInterval(() => {
         currentSlide = (currentSlide + 1) % TOTAL;
         updateSlider();
-      }, 5500);
+      }, 7000);
+
+      // Mobile slider
+      let mCurrentSlide = 0;
+      const M_TOTAL = 12;
+      const mTrack = document.getElementById("mobile-slider-track");
+      const mDotsWrap = document.getElementById("mobile-slider-dots");
+
+      for (let i = 0; i < M_TOTAL; i++) {
+        const d = document.createElement("div");
+        d.className = `dot${i === 0 ? " active" : ""}`;
+        d.addEventListener("click", () => { mCurrentSlide = i; updateMobileSlider(); });
+        mDotsWrap.appendChild(d);
+      }
+
+      function updateMobileSlider() {
+        mTrack.style.transform = `translateX(-${mCurrentSlide * 100}%)`;
+        document.getElementById("m-cur-slide").textContent = mCurrentSlide + 1;
+        mDotsWrap.querySelectorAll(".dot").forEach((d, i) => {
+          d.classList.toggle("active", i === mCurrentSlide);
+        });
+      }
+      document.getElementById("m-prev-btn").addEventListener("click", () => {
+        mCurrentSlide = (mCurrentSlide - 1 + M_TOTAL) % M_TOTAL;
+        updateMobileSlider();
+      });
+      document.getElementById("m-next-btn").addEventListener("click", () => {
+        mCurrentSlide = (mCurrentSlide + 1) % M_TOTAL;
+        updateMobileSlider();
+      });
+      setInterval(() => {
+        mCurrentSlide = (mCurrentSlide + 1) % M_TOTAL;
+        updateMobileSlider();
+      }, 7000);
 
       // Scroll reveal
       const revealObs = new IntersectionObserver(
@@ -1888,7 +2150,7 @@
                 btn.textContent = "Отправить заявку";
                 btn.style.background = "";
                 btn.disabled = false;
-              }, 5000);
+              }, 3000);
             } else {
               
               throw new Error(data.message || "Ошибка");
@@ -1901,7 +2163,7 @@
             setTimeout(() => {
               btn.textContent = "Отправить заявку";
               btn.style.background = "";
-            }, 5000);
+            }, 3000);
           }
         });
     </script>
