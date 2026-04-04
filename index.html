@@ -247,14 +247,37 @@
             <a href="#faq" class="nav-link">FAQ</a>
           </nav>
           <div class="header-right">
-            <a href="#consultation" class="btn btn-orange btn-hover-phone">
+            <a href="#consultation" class="btn btn-orange btn-hover-phone header-cta-desktop">
               <span class="btn-text-default">Заказать звонок</span>
               <span class="btn-text-hover">+375 (29) 637-53-33</span>
             </a>
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#services" class="mobile-nav-link">Наши услуги</a>
+        <a href="#why-us" class="mobile-nav-link">Почему мы?</a>
+        <a href="#pricing" class="mobile-nav-link">Цены</a>
+        <a href="#portfolio" class="mobile-nav-link">Работы</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="#consultation" class="btn btn-orange btn-hover-phone mobile-menu-cta">
+          <span class="btn-text-default">Заказать звонок</span>
+          <span class="btn-text-hover">+375 (29) 637-53-33</span>
+        </a>
+        <a href="tel:+375296375333" class="mobile-menu-phone">+375 (29) 637-53-33</a>
+      </div>
+    </div>
     <div class="shapes">
       <img alt="" src="./assets/shapes.png" loading="lazy" decoding="async" />
     </div>
@@ -1614,6 +1637,42 @@
         header.classList.toggle("scrolled", window.scrollY > 40);
       });
 
+      // Burger menu
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuOverlay = document.getElementById("menuOverlay");
+
+      const logoImg = document.querySelector(".logo-mark img");
+
+      function openMenu() {
+        burgerBtn.classList.add("open");
+        burgerBtn.setAttribute("aria-expanded", "true");
+        mobileMenu.classList.add("open");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        menuOverlay.classList.add("open");
+        header.classList.add("menu-open");
+        logoImg.src = "/assets/white-logo.svg";
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        burgerBtn.classList.remove("open");
+        burgerBtn.setAttribute("aria-expanded", "false");
+        mobileMenu.classList.remove("open");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        menuOverlay.classList.remove("open");
+        header.classList.remove("menu-open");
+        logoImg.src = "/assets/logo.svg";
+        document.body.style.overflow = "";
+      }
+
+      burgerBtn.addEventListener("click", () => {
+        burgerBtn.classList.contains("open") ? closeMenu() : openMenu();
+      });
+      menuOverlay.addEventListener("click", closeMenu);
+      mobileMenu.querySelectorAll(".mobile-nav-link, .mobile-menu-cta").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
       // Smooth anchor scroll
       document.querySelectorAll('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (e) => {
@@ -1888,7 +1947,7 @@
                 btn.textContent = "Отправить заявку";
                 btn.style.background = "";
                 btn.disabled = false;
-              }, 5000);
+              }, 3000);
             } else {
               
               throw new Error(data.message || "Ошибка");
@@ -1901,7 +1960,7 @@
             setTimeout(() => {
               btn.textContent = "Отправить заявку";
               btn.style.background = "";
-            }, 5000);
+            }, 3000);
           }
         });
     </script>
